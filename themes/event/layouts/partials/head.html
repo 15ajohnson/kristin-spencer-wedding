@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+
+<div id="header">
+  <div id="header-content">
+    <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+  
+    <p id="sub-header">
+      SPENCER & KRISTIN
+    </p>
+  
+    <p id="sub-header-info">
+      JULY 12, 2025 • COLUMBUS, OHIO
+    </p>
+
+    <div id="rsvp-content">
+      <div id="rsvp-text">
+        <span>☙</span>RSVP<span>❧</span>
+      </div>
+    </div>
+    
+    <div class="nav">
+      <a href="{{ .Site.BaseURL }}">Home</a>
+      <a href="{{ .Site.BaseURL }}">Our Story</a>
+      <a href="{{ .Site.BaseURL }}travel">Travel</a>
+      <a href="{{ .Site.BaseURL }}">Wedding Party</a>
+      <a href="{{ .Site.BaseURL }}">Registry</a>
+      <a href="{{ .Site.BaseURL }}">What to Know</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+baseURL = 'https://15ajohnson.github.io/kristin-spencer-wedding/'
+languageCode = 'en-us'
+title = 'Test'
+theme = 'event'
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params.logos]
+    header = "images/logos/header-blue.png"
+
+[params.background]
+    image = "images/backgrounds/AdobeStock_302962318.jpeg"

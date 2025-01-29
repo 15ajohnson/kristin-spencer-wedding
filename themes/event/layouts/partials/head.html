@@ -3,8 +3,13 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
+<div class="nav" id="mobile">
+  <img id="menu-icon" src="{{ .Site.BaseURL }}{{ .Site.Params.accents.menu }}" alt="logo {{ .Site.Title }}"> 
+</div>
+
 <div id="header">
   <div id="header-content">
+    
     <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
   
     <p id="sub-header">
@@ -17,7 +22,7 @@
 
     <div id="rsvp-content">
       <div id="rsvp-text">
-        <span>☙</span>RSVP<span>❧</span>
+        <span>♦ </span>RSVP<span> ♦</span>
       </div>
     </div>
     

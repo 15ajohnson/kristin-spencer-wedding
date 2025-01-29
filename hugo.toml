@@ -11,3 +11,6 @@ unsafe= true
 
 [params.background]
     image = "images/backgrounds/AdobeStock_302962318.jpeg"
+
+[params.accents] 
+    menu = "images/accents/hamburger.png"

@@ -84,6 +84,7 @@ html, body {
 }
 
 body {
+  container-type: inline-size;
   color: #222;
   font-family: sans-serif;
   line-height: 1.5;
@@ -93,7 +94,6 @@ body {
 }
 
 #header {
-  container-type: inline-size;
   background: #fafafa00;
 }
 
@@ -101,7 +101,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 20px 0px 0px 0px;
   width: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(255 255 255 / 76%) 56%, rgba(255, 255, 255, 0) 83%);
   align-items: center;
@@ -109,6 +108,7 @@ body {
 
 #header-content #logo {
   width: 165px;
+  margin-top: 10px;
 }
 
 #sub-header {
@@ -137,7 +137,7 @@ body {
 }
 
 #rsvp-text {
-  margin: 5px 0px;
+  margin: 5px 0px 10px 0px;
   padding: 0px 13px 0px 20px;
   color: #505c44;
   font-family: 'Chamberi Light Italic';
@@ -168,7 +168,6 @@ body {
 }
 
 .nav {
-  margin-top: 5px;
   width: 100%;
   background: #9aaa8ba8;
   padding: 7px 0px;
@@ -188,6 +187,21 @@ body {
 
 .nav a:hover {
   color: #ffffff;
+}
+
+#mobile {
+  display: none;
+}
+
+#menu-icon {
+  width: 18px;
+  margin-left: 10px;
+}
+
+#menu-icon-active {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 @container (max-width: 500px) {
@@ -211,8 +225,18 @@ body {
   }
   
   .nav {
-    font-size: 12px;
+    display: none;
   }
+
+  #mobile {
+    width: 100%;
+    background: #9aaa8ba8;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+
 }
 
 #main {

@@ -5,10 +5,7 @@
   })();
     
   function scrollFunction() {
-    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
-      console.log(document.documentElement.scrollTop)
-      console.log(document.body.scrollTop)
-    }
+    document.getElementById("menu-icon-active").setAttribute("id", "menu-icon-active")
     // if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     //   // Scroll Down
     //   document.getElementById("header").style.position="fixed";

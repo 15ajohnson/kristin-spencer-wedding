@@ -113,7 +113,7 @@ body {
 
 #sub-header {
   font-family: 'Chamberi Regular';
-  color: #4c827e;
+  color: #424242;
   font-size: 2.5vw;
   letter-spacing: 8px;
   margin: 5px 0px 2px 0px;
@@ -121,9 +121,9 @@ body {
 
 #sub-header-info {
   margin: 5px 0px;
-  font-family: 'Chamberi Light';
+  font-family: 'Chamberi Regular';
   letter-spacing: 6px;
-  color: #002f45;
+  color: #424242;
   font-size: 1vw;
 }
 
@@ -267,100 +267,7 @@ body {
   text-align: center;
 }
 
-/* header {
-  width: 100%;
-  max-height: 300px;
-  position: fixed;
-  top: 0;
-  background-color: #ffffff;
-} */
-
-/* #header {
-  width: 100%;
-  z-index: 128;
-  position: absolute;
-  top: 20px;
-  margin-top: 0px;
-  display: grid;
-}
-
-#header-content {
-  height: 275px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  margin-top: -20px;
-  background-color: #ffffff;
-}
-
-
-#sub-header {
-  font-family: 'Chamberi Light';
-  font-size: 190%;
-  transition: 0.2s;
-  letter-spacing: 8px;
-  color: #00354e;
-}
-
-.nav {
-  width: 100%;
-  transition: 0.2s;
-}
-
-.nav a {
-  font-family: 'Bodoni';
-  color: #000000;
-  text-decoration: none;
-  padding: 0px 10px;
-} */
-
-/* #header {
-  background-color: #ffffff;
-  height: 69px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  margin-top: -20px;
-  /* border-bottom: #f3f3f3 1px solid;
-  max-height: 275px;
+#rsvp-container {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 10px 5px 10px;
-  transition: 0.2s; */
-  
-/* 
-
-footer {
-  width:100%;
-}
-
-footer .footer {
-  padding: 10px;
-  height: 20px;
-  background-color: #536759;
-}
-
-footer p {
-  margin: 0;
-}
-
-
-
-#main {
-  height: 100%;
-  min-height: 100vh;
   background-color: #f3f3f3;
-  margin: 0px 10%;
-  padding-top: 255px;
-  transition: 0.2s;
 }
-
-#main .content {
-  text-align: center;
-}
-
-#main .content img {
-  width: 95%;
-} */

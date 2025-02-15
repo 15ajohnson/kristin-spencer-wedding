@@ -1,25 +1,33 @@
-(() => {
-    window.onscroll = function() {
-      scrollFunction()
-    };
-  })();
+var endDate = new Date("July 15, 2025 12:00:00").getTime();
+
+var timer = setInterval(function() {
+
+    let now = new Date().getTime();
+    let t = endDate - now;
     
-  function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      console.log(document.documentElement.scrollTop)
-    //   // Scroll Down
-    //   document.getElementById("header").style.position="fixed";
-    //   document.getElementById("header").style.top="0px";
-    //   document.getElementById("header-content").style.height="150px";
-    //   document.getElementById("header-content").style.overflow="hidden";
-    //   // document.getElementById("logo").style.width="100px";
-    //   // document.getElementById("sub-header").style.display="none";
+    if (t >= 0) {       
+        const countdown = {
+            "days": Math.floor(t / (1000 * 60 * 60 * 24)),
+            "hours": Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), 
+            "minutes": Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)), 
+            "seconds": Math.floor((t % (1000 * 60)) / 1000)
+        }
+
+        for (const [key, value] of Object.entries(countdown)) {
+            if (value == 1) {
+                label = `${key.slice(0, -1)}`
+            }
+            else {
+                label = `${key}`
+            }
+
+            document.getElementById(`timer-${key}`).innerHTML = ("0" + value).slice(-2);
+            document.getElementById(`label-${key}`).innerHTML = `${label}`;
+        }
     } else {
-    //   // document.getElementById("logo").style.width="150px";
-    //   // document.getElementById("sub-header").style.display="block";
-    //   document.getElementById("header").style.position="absolute";
-    //   document.getElementById("header").style.top="20px";
-    //   document.getElementById("header-content").style.height="275px";
-    //   document.getElementById("header-content").style.overflow="visible";
+
+        document.getElementById("timer").innerHTML = "The countdown is over!";
+    
     }
-  }
+    
+}, 1000);

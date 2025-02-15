@@ -80,7 +80,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-height: 200px;
+  height: 100%;
 }
 
 body {
@@ -104,11 +104,12 @@ body {
   width: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(255 255 255 / 76%) 56%, rgba(255, 255, 255, 0) 83%);
   align-items: center;
+  border-bottom: 9px solid #b3c7e052;
 }
 
 #header-content #logo {
   width: 165px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 #sub-header {
@@ -168,12 +169,14 @@ body {
 
 .nav {
   width: 100%;
-  background: #9aaa8ba8;
+  background: #bac5b1;
   padding: 7px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 99;
 }
 
 .nav a {
@@ -239,17 +242,12 @@ body {
 }
 
 #main {
-  height: 100%;
-  min-height: 100vh;
   background-color: #f3f3f3;
 }
 
-#main #content {
-  position: relative;
-}
-
-#main img {
-  width: 100%
+#main #main-image {
+  width: 100%;
+  display: block;
 }
 
 #main #img-overlay {
@@ -270,3 +268,202 @@ body {
   text-align: center;
   background-color: #f3f3f3;
 }
+
+/*
+  OUR STORY STYLING
+*/
+#our-story-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  align-items: center;
+  margin-top: 2%;
+}
+
+#our-story-title {
+  font-family: 'Chamberi Light Italic';
+  padding: 30px 0px;
+  color: #373737;
+  font-size: 3.5vw;
+  letter-spacing: 6px;
+}
+
+#timeline-content {
+  width: 100%;
+}
+
+#timeline-start {
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to left, white, #8daf98 50%, #ffffff 100%) 1 0;
+  border-top: 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  width: 60%;
+}
+
+#timeline-start-text {
+  font-family: 'Chamberi Light';
+  color: #373737;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-size: 100%;
+}
+
+#timeline-date-text {
+  font-family: 'sans-serif';
+  padding-bottom: 10px;
+  color: #66808d;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+#timeline-background {
+  width: 80%;
+}
+
+#timeline-img-content {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 200px;
+  display: flex;
+  margin: 0;
+}
+
+#timeline-grid {
+  display: block;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: start;
+  margin: 10px 0px 0px 0px;
+}
+
+#timeline-img {
+  width: 13%;
+  max-width: 305px;
+  margin: 0px -5px;
+  z-index: 1;
+}
+
+#timeline-text {
+  font-size: 100%;
+  width: 30%;
+  max-width: 700px;
+  font-family: 'Chamberi Light';
+  color: #373737;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  background: #c9d6db;
+  outline: 5px double #b3c7e0;
+  padding: 12px 8px 8px 8px;
+  border-radius: 10px;
+  outline-offset: 6px;
+  z-index: 1;
+}
+
+#timeline-spacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+#spacer {
+  font-family: 'sans-serif';
+  padding: 10px 60px;
+  color: #66808d;
+  line-height: 0.5;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #abc2cd;
+  background: #d4dacf;
+}
+
+#last-timeline {
+  display: flex;
+  background: #070707;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  padding: 0px;
+  justify-content: center;
+  margin-top: 2%;
+  align-items: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+}
+
+#last-timeline-img {
+  width: 45%;
+  padding-right: 10%;
+}
+
+#last-timeline-text {
+  font-size: 100%;
+  padding: 0 12%;
+}
+
+#timer {
+  display: grid;
+  color: #f9f6dd;
+  padding: 5% 0px;
+  font-family: 'Chamberi Regular';
+  letter-spacing: 5px;
+  background: #3b3b3b7a;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+  font-size: 24px;
+  column-gap: 0;
+}
+
+#timer-separator {
+  padding: 0px 5px;
+}
+
+@container (max-width: 500px) {
+  #our-story-title {
+    font-size: 6.5vw;
+  }
+
+  #timeline-start {
+    width: 80%;
+  }
+
+  #timeline-start-text {
+    font-size: 12.5px;
+  }
+
+  #timeline-img {
+    width: 25%;
+  }
+
+  #timeline-text {
+    font-size: 50%;
+    outline-offset: 3px;
+    outline: 3px double #b3c7e0;
+  }
+
+  #spacer {
+    width: 25%;
+    font-size: 1.2vh;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  #last-timeline-text {
+    font-size: 50%;
+  }
+
+  #timer-numbers {
+    font-size: 12px;
+    padding-left: 10%;
+  }
+
+  #timer {
+    font-size: 10%;
+  }
+}
+

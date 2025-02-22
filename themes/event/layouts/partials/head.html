@@ -5,7 +5,9 @@
 
 <div id="header">
   <div id="header-content">
-    <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+    <a href="{{ .Site.BaseURL }}">
+      <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+    </a>
   
     <p id="sub-header">
       SPENCER & KRISTIN
@@ -16,9 +18,11 @@
     </p>
 
     <div id="rsvp-content">
-      <div id="rsvp-text">
-        <span>♦ </span>RSVP<span> ♦</span>
-      </div>
+      <a href="{{ .Site.BaseURL }}rsvp">
+        <div id="rsvp-text">
+            <span>♦ </span>RSVP<span> ♦</span>
+        </div>
+      </a>
     </div>
   </div>
 </div>

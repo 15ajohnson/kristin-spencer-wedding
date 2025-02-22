@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-<body style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
-  <head> 
-    {{ partial "head.html" . }}
-  </head>
+  <body style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
+    <nav>
+      {{ partial "nav.html" . }}
+    </nav>
 
-  TRAVEL PAGE
+    <head> 
+      {{ partial "head.html" . }}
+    </head>
 </body>
 </html>

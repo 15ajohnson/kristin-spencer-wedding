@@ -14,3 +14,4 @@ unsafe= true
 
 [params.accents] 
     menu = "images/accents/hamburger.png"
+    

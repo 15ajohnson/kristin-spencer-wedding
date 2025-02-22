@@ -29,7 +29,7 @@
             <div id="timeline-img-content" style="background-image: url('{{ .Site.BaseURL }}images/timeline/flowers-blue.png');">
               <div id="timeline-grid">
                 <div id="timeline-spacer">
-                  <img id="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-1-no-border.png">
+                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-1-no-border-color.png">
                   <div id="spacer">September, 2018</div>
                   <span id="timeline-text" class="stamp-border">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>  
                 </div>
@@ -37,11 +37,11 @@
                 <div id="timeline-spacer">
                   <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
                   <div id="spacer">May, 2021</div>
-                  <img id="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-2-no-border.png">
+                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-2-no-border-color.png">
                 </div>
 
                 <div id="timeline-spacer"> 
-                  <img id="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-3-no-border.png">
+                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-3-no-border-color.png">
                   <div id="spacer">August, 2023</div>
                   <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
                 </div>
@@ -49,26 +49,28 @@
                 <div id="timeline-spacer">
                   <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
                   <div id="spacer">December, 2023</div>
-                  <img id="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-4-no-border.png">
+                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-4-no-border-color.png">
                 </div>
 
                 <div id="timeline-spacer">
-                  <img id="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-5-no-border.png">
+                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-5-no-border-color.png">
                   <div id="spacer">April, 2024</div>
                   <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
                 </div>
-
-                <div id="last-timeline" style="background-image: url('{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg');">
-                  <div id="timer">
-                    <span id="timer-days"></span>
-                    <span id="timer-hours"></span>
-                    <span id="timer-minutes"></span>
-                    <span id="timer-seconds"></span>
-                    <span id="label-days"></span>
-                    <span id="label-hours"></span>
-                    <span id="label-minutes"></span>
-                    <span id="label-seconds"></span>
-
+                
+                <div id="last-timeline" style="background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url('{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg');">
+                  <div id="timer-content">
+                    <span id="timer-header">A New Chapter Begins in...</span>
+                      <div id="timer">
+                        <span id="timer-days"></span>
+                        <span id="timer-hours"></span>
+                        <span id="timer-minutes"></span>
+                        <span id="timer-seconds"></span>
+                        <span id="label-days"></span>
+                        <span id="label-hours"></span>
+                        <span id="label-minutes"></span>
+                        <span id="label-seconds"></span>
+                      </div>
                   </div>
                   <!-- <img id="last-timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg"> -->
                 </div>

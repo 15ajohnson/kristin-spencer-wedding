@@ -1,23 +1,18 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
-
 <div id="header">
   <div id="header-content">
     <a href="{{ .Site.BaseURL }}">
-      <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+      <img id="logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}" class="fade-in-animation">
     </a>
   
-    <p id="sub-header">
+    <p id="sub-header" class="fade-in-animation">
       SPENCER & KRISTIN
     </p>
   
-    <p id="sub-header-info">
+    <p id="sub-header-info" class="fade-in-animation">
       JULY 12, 2025 • COLUMBUS, OHIO
     </p>
 
-    <div id="rsvp-content">
+    <div id="rsvp-container" class="fade-in-animation">
       <a href="{{ .Site.BaseURL }}rsvp">
         <div id="rsvp-text">
             <span>♦ </span>RSVP<span> ♦</span>

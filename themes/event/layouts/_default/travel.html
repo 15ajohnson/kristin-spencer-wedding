@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
-    <nav>
-      {{ partial "nav.html" . }}
-    </nav>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
 
-    <head> 
-      {{ partial "head.html" . }}
-    </head>
-</body>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <body>
+    <div>
+      <nav>
+        {{ partial "nav.html" . }}
+      </nav>
+
+      <div class="background fade-in-animation">
+        <head> 
+          {{ partial "head-minimal.html" . }}
+        </head>
+      </div>
+
+      <main id="main">
+        <div id="content">
+          
+          <div id="travel-content" class="fade-in-animation" style="background-image: url('{{ .Site.BaseURL }}images/backgrounds/flowers-left.png'), url('http://localhost:1313/kristin-spencer-wedding/images/backgrounds/flowers-right.png');">
+            <div id="travel-title">Travel</div>
+            
+            <div class="travel-img-containers">
+              <div class="travel-img-container">
+                <img id="travel-img" src="{{ .Site.BaseURL }}images/personal/venue1.jpg">
+              </div>
+              <div class="travel-img-container">
+                <img id="travel-img" src="{{ .Site.BaseURL }}images/personal/venue2.png">
+              </div>
+              <div class="travel-img-container">
+                <img id="travel-img" src="{{ .Site.BaseURL }}images/personal/venue3.jpg">
+              </div>
+              <div class="travel-img-container">
+                <img id="travel-img" src="{{ .Site.BaseURL }}images/personal/venue4.png">
+              </div>
+            </div>
+
+            <div id="venue-accent-container">              
+              <div id="venue-description">
+                <p style="text-align: center;">The ceremony & reception will both be held at <a href="https://north4thcorridor.com/brick-mortar-180/" target="_blank">Brick & Mortar - North 4th Corridor</a></p>
+
+                <p style="font-family: 'Chamberi Regular'; text-align: center; margin: 0;">
+                  Brick and Mortar <br> 580 N 4th St Columbus, OH 43215
+                </p>
+
+                <div id="venue-directions">
+                  <a href="https://maps.app.goo.gl/zZfiWKpeZgc7Wnbj9" target="_blank" style="font-family: 'Chamberi Light';">♦ Get Directions ♦</a>
+                </div>
+
+                <div id="travel-title" style="font-size: 30px;">Accommodations</div>
+
+                <p style="text-align: center; margin: 10px;"><b>Rooms available July 11 - 13, 2025</b></p>
+
+                <div class="accommodation-containers">
+                  <div class="accommodation-img-containers">
+                    <div class="accommodation-img-container">
+                      <img id="accommodation-img" src="{{ .Site.BaseURL }}images/personal/hotel1.png">
+                    </div>
+                    <p style="font-family: 'Chamberi Regular'; text-align: center; margin: 20px 0 0 0;">
+                      <a href="https://www.hyatt.com/hyatt-regency/en-US/cmhrc-hyatt-regency-columbus" target="_blank">Hyatt Regency Columbus</a><br> 350 North High Street Columbus, OH 43215<br>(614) 463 1234
+                    </p>
+
+                    <div id="venue-directions">
+                      <a href="https://www.hyatt.com/en-US/group-booking/CMHRC/G-KWRB" target="_blank" style="font-family: 'Chamberi Light';">♦ Reservations ♦</a>
+                      <p id="group-code">Group code: G-KWRB</p>
+                    </div>
+    
+                    <p style="text-align: center; margin: 10px;">Reservations must be made <b>BEFORE June 27, 2025</b>. After this date, room rates will no longer be available and any remaining rooms from the block will be released from the block.</a></p>
+                  </div>
+
+                  <div class="accommodation-img-containers">
+                    <div class="accommodation-img-container">
+                      <img id="accommodation-img" src="{{ .Site.BaseURL }}images/personal/hotel2.jpg">
+                    </div>
+                    <p style="font-family: 'Chamberi Regular'; text-align: center; margin: 20px 0 0 0;">
+                      <a href="https://www.hilton.com/en/locations/usa/ohio/columbus/graduate-hotels/?WT.mc_id=zlada0ww1gu2psh3ggl4advbpp5dkt6multibr7_346243804_1003528&gad_source=1&gclid=Cj0KCQjw4v6-BhDuARIsALprm30xMuOwAplaU6rjGvUfb8v22bfNG4_GlkK8Dmly8ekIkHKGV8Ql9F8aAk6bEALw_wcB&gclsrc=aw.ds" target="_blank">Graduate by Hilton Columbus</a><br> 750 North High Street Columbus, OH 43215<br>(614) 977 0052
+                    </p>
+
+                    <div id="venue-directions">
+                      <a href="https://book.passkey.com/gt/220615022?gtid=9b542440c9cf3ff3a8736d5ec86b114b" target="_blank" style="font-family: 'Chamberi Light';">♦ Reservations ♦</a>
+                    </div>
+    
+                    <p style="text-align: center; margin: 10px;">Reservations must be made <b>BEFORE June 11, 2025</b>. After this date, room rates will no longer be available and any remaining rooms from the block will be released from the block.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

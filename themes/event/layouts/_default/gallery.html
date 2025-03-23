@@ -9,15 +9,15 @@
     <nav>
       {{ partial "nav.html" . }}
     </nav>
-    <div id="gallery-container" style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
-      <div id="focused-gallery" >
+    <div id="gallery-container" class="background fade-in-animation" style="background-image: url('{{ .Site.BaseURL }}images/backgrounds/flowers-left.png'), url('http://localhost:1313/kristin-spencer-wedding/images/backgrounds/flowers-right.png');">
+      <div id="focused-gallery">
         <button id="zoom-close" onclick="zoomImg()">&#10005;</button>
         <button class="arrow" onclick="nextImg(-1)">&#10094;</button>
-        <img id="current-img" src="{{ .Site.BaseURL }}images/gallery/1.jpg" onclick="zoomImg()"/>
+        <img id="current-img" class="fade-in-animation" src="{{ .Site.BaseURL }}images/gallery/1.jpg" onclick="zoomImg()"/>
         <button class="arrow" onclick="nextImg(1)">&#10095;</button>
       </div>
 
-      <div id="gallery">
+      <div id="gallery" class="fade-in-animation">
         <img onclick="focusImg(this)" src="{{ .Site.BaseURL }}images/gallery/1.jpg"/>
         <img onclick="focusImg(this)" src="{{ .Site.BaseURL }}images/gallery/2.jpg"/>
         <img onclick="focusImg(this)" src="{{ .Site.BaseURL }}images/gallery/3.jpg"/>
@@ -104,10 +104,12 @@
 
   function zoomImg() {
     const curImg = document.getElementById('current-img');
+    const nav = document.getElementsByClassName('nav')[0]
     const arrows = Array.from(document.getElementsByClassName('arrow'))
     const zoomClose = document.getElementById('zoom-close');
 
     if (window.getComputedStyle(zoomClose).display == 'none') {
+      nav.style.display = "none";
       curImg.parentElement.classList.add('zoom');
       curImg.classList.add('zoom');
       arrows.forEach(element => {
@@ -115,6 +117,7 @@
       });
       zoomClose.classList.add('active');
     } else {
+      nav.style.display = "flex";
       curImg.parentElement.classList.remove('zoom');
       curImg.classList.remove('zoom');
       arrows.forEach(element => {

@@ -1,7 +1,7 @@
 window.onload = function() {
   // Set countdown timer on home page
   if (document.getElementById("timer") != null) {
-    const endDate = new Date("July 15, 2025 12:00:00").getTime();
+    const endDate = new Date("July 12, 2025 5:30:00").getTime();
     setInterval(function() {
       const now = new Date().getTime();
       const t = endDate - now;

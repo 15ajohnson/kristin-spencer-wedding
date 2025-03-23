@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <body>
+    <div>
+      <nav>
+        {{ partial "nav.html" . }}
+      </nav>
+
+      <div class="background fade-in-animation">
+        <head> 
+          {{ partial "head-minimal.html" . }}
+        </head>
+      </div>
+
+      <main id="main">
+        <div id="content">
+      
+          <div id="our-story-content" class="fade-in-animation">
+            <span id="our-story">Our Story</span>
+            
+            <div id="timeline-content" class="timeline-spacer-right">
+              <div id="timeline-img-content" style="background-image: url('{{ .Site.BaseURL }}images/timeline/flowers-blue.png');">
+                <div id="timeline-grid">
+                  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text" class="timeline-text-reverse">
+                      <div id="timeline-text-spacer" style="max-width: 100%;">
+                        <span id="timeline-date-text">August, 2017</span>
+                        Spencer and Kristin met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.
+                      </div>
+                    </span> 
+                  </div>
+                  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text">
+                      <div class="timeline-img-div-border"><div class="timeline-img-div"><img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-1-no-border.png"></div></div>
+                      <div id="timeline-text-spacer">
+                        <span id="timeline-date-text">September, 2018</span>
+                        After living in the same dorm & spending time together throughout their sophomore year, Spencer and Kristin officially started dating on September 15th.
+                      </div>
+                    </span> 
+                  </div>
+  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text" class="timeline-text-reverse">
+                      <div class="timeline-img-div-border"><div class="timeline-img-div"><img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-2-no-border.png"></div></div>
+                      <div id="timeline-text-spacer">
+                        <span id="timeline-date-text">May, 2021</span>
+                        Graduating from Miami University ended their college journey and set the stage for an exciting new adventure in Columbus.
+                      </div>
+                    </span> 
+                  </div>
+  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text">
+                      <div class="timeline-img-div-border"><div class="timeline-img-div"><img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-3-no-border.png"></div></div>
+                      <div id="timeline-text-spacer">
+                        <span id="timeline-date-text">August, 2023</span>
+                        Spencer and Kristin celebrated a significant milestone when they moved in together in the summer of 2023.
+                      </div>
+                    </span> 
+                  </div>                
+  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text" class="timeline-text-reverse">
+                      <div class="timeline-img-div-border"><div class="timeline-img-div"><img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-4-no-border.png"></div></div>
+                      <div id="timeline-text-spacer">
+                        <span id="timeline-date-text">December, 2023</span>
+                        Not long after, they welcomed a new family member, Bonnie.
+                      </div>
+                    </span> 
+                  </div>
+  
+                  <div id="timeline-spacer">
+                    <span id="timeline-text">
+                      <div class="timeline-img-div-border"><div class="timeline-img-div"><img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-5-no-border.png"></div></div>
+                      <div id="timeline-text-spacer">
+                        <span id="timeline-date-text">April, 2024</span>
+                        Spencer proposed to Kristin, and she happily said yes! 
+                      </div>
+                    </span> 
+                  </div>
+                  
+                  <div id="last-timeline" style="background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url('{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg');">
+                    <div id="timer-content">
+                      <span id="timer-header">A New Chapter Begins in...</span>
+                        <div id="timer">
+                          <span id="timer-days"></span>
+                          <span id="timer-hours"></span>
+                          <span id="timer-minutes"></span>
+                          <span id="timer-seconds"></span>
+                          <span id="label-days"></span>
+                          <span id="label-hours"></span>
+                          <span id="label-minutes"></span>
+                          <span id="label-seconds"></span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

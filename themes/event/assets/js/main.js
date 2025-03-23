@@ -15,14 +15,9 @@ window.onload = function() {
         }
   
         for (const [key, value] of Object.entries(countdown)) {
-          if (value == 1) {
-            label = `${key.slice(0, -1)}`
-          }
-          else {
-            label = `${key}`
-          }
-
-          document.getElementById(`timer-${key}`).innerHTML = ("0" + value).slice(-2);
+          label = `${key}`
+          const slice = (value.toString().length) * -1;
+          document.getElementById(`timer-${key}`).innerHTML = ("0" + value).slice(slice);
           document.getElementById(`label-${key}`).innerHTML = `${label}`;
         }
       } else {

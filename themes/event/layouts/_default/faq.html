@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
-    <nav>
-      {{ partial "nav.html" . }}
-    </nav>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
 
-    <head> 
-      {{ partial "head.html" . }}
-    </head>
-</body>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <body>
+    <div>
+      <nav>
+        {{ partial "nav.html" . }}
+      </nav>
+
+      <div class="background fade-in-animation">
+        <head> 
+          {{ partial "head-minimal.html" . }}
+        </head>
+      </div>
+
+      <main id="main">
+        <div id="content">
+          
+          <div id="faq-content" class="fade-in-animation" style="background-image: url('{{ .Site.BaseURL }}images/backgrounds/flowers-left.png'), url('http://localhost:1313/kristin-spencer-wedding/images/backgrounds/flowers-right.png');">
+            <div id="faq-title">FAQ</div>
+
+            <div id="faq-container">              
+              <p id="faq-question">Are the ceremony and reception at the same venue?</p>
+
+              <p id="faq-answer">
+                Yes! The ceremony, cocktail hour, and reception will be at Brick and Mortar (address can be found in the <a href="{{ .Site.BaseURL }}travel">Travel</a> tab). The ceremony and cocktail hour will be held in the outdoor courtyard, and the reception will be indoors.
+              </p>
+
+              <p id="faq-question">What time should I arrive?</p>
+
+              <p id="faq-answer">
+                Guests may start arriving at 5:00 PM for the ceremony at 5:30 PM. Please plan to arrive a <b>minimum of 15 minutes early</b> to accommodate for parking and getting seated before the ceremony.
+              </p>
+
+              <p id="faq-question">Is there parking?</p>
+
+              <p id="faq-answer">
+                Yes, our venue has plenty of free parking available on-site.
+              </p>
+
+              <p id="faq-question">What is the dress code?</p>
+
+              <p id="faq-answer">
+                We appreciate you wearing your best cocktail or semi-formal attire.
+              </p>
+
+              <p id="faq-question">Are my children invited?</p>
+
+              <p id="faq-answer">
+                Although we love your little ones, the wedding is an adults only evening. Thank you for making arrangements ahead of time and leaving the kids at home.
+              </p>
+
+              <p id="faq-question">Do you have a registry?</p>
+
+              <p id="faq-answer">
+                Your presence at our wedding is the greatest gift we could ask for! For those who wish, we have a <a href="">registry</a>. 
+              </p>
+
+              <p id="faq-question">Hotel Blocks</p>
+
+              <p id="faq-answer">
+                Information on hotel blocks can be found in the <a href="{{ .Site.BaseURL }}travel">Travel</a> tab on this website. 
+              </p>
+
+              <p id="faq-question">RSVP Date</p>
+
+              <p id="faq-answer">
+                Please <b>RSVP by June 12th</b>, through the link in the <a href="{{ .Site.BaseURL }}rsvp">RSVP</a> tab on this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

@@ -1,83 +1,24 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.background.image }}');">
+  <body >
     <nav>
       {{ partial "nav.html" . }}
     </nav>
 
-    <head> 
-      {{ partial "head.html" . }}
-    </head>
+    <div class="background fade-in-animation" style="background-image: url('{{ .Site.BaseURL }}images/backgrounds/flower-header-left.png'), url('http://localhost:1313/kristin-spencer-wedding/images/backgrounds/flower-header-right.png'); background-size: 25%;">
+      <head> 
+        {{ partial "head.html" . }}
+      </head>
+    </div>
 
     <main id="main">
       <div id="content">
         <img id="main-image" src="{{ .Site.BaseURL }}images/personal/K _2b S-158.jpg">
-        
-        <div id="our-story-content">
-          <span id="our-story-title">Our Story</span>
-          
-          <div id="timeline-start">
-            <span id="timeline-date-text">August, 2017</span>
-            <span id="timeline-start-text">
-              Spencer and Kristen met during move in week at Miami University. 
-              <br>
-              She was the first girl he met in college, marking the start of their journey together.
-            </span>
-          </div>
-            
-          <div id="timeline-content" >
-            <div id="timeline-img-content" style="background-image: url('{{ .Site.BaseURL }}images/timeline/flowers-blue.png');">
-              <div id="timeline-grid">
-                <div id="timeline-spacer">
-                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-1-no-border-color.png">
-                  <div id="spacer">September, 2018</div>
-                  <span id="timeline-text" class="stamp-border">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>  
-                </div>
-
-                <div id="timeline-spacer">
-                  <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
-                  <div id="spacer">May, 2021</div>
-                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-2-no-border-color.png">
-                </div>
-
-                <div id="timeline-spacer"> 
-                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-3-no-border-color.png">
-                  <div id="spacer">August, 2023</div>
-                  <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
-                </div>
-
-                <div id="timeline-spacer">
-                  <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
-                  <div id="spacer">December, 2023</div>
-                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-4-no-border-color.png">
-                </div>
-
-                <div id="timeline-spacer">
-                  <img class="timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-5-no-border-color.png">
-                  <div id="spacer">April, 2024</div>
-                  <span id="timeline-text">Spencer and Kristen met during move in week at Miami University. She was the first girl he met in college - marking the start of their journey together.</span>
-                </div>
-                
-                <div id="last-timeline" style="background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url('{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg');">
-                  <div id="timer-content">
-                    <span id="timer-header">A New Chapter Begins in...</span>
-                      <div id="timer">
-                        <span id="timer-days"></span>
-                        <span id="timer-hours"></span>
-                        <span id="timer-minutes"></span>
-                        <span id="timer-seconds"></span>
-                        <span id="label-days"></span>
-                        <span id="label-hours"></span>
-                        <span id="label-minutes"></span>
-                        <span id="label-seconds"></span>
-                      </div>
-                  </div>
-                  <!-- <img id="last-timeline-img" src="{{ .Site.BaseURL }}images/timeline/timeline-img-6.jpg"> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   </body>

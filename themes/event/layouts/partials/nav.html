@@ -1,13 +1,26 @@
-<div class="nav">
-  <a href="{{ .Site.BaseURL }}">Home</a>
-  <a href="{{ .Site.BaseURL }}#our-story-title">Our Story</a>
-  <a href="{{ .Site.BaseURL }}gallery">Gallery</a>
-  <a href="{{ .Site.BaseURL }}rsvp">RSVP</a>
-  <a href="{{ .Site.BaseURL }}travel">Travel</a>
-  <a href="{{ .Site.BaseURL }}faq">What to Know</a>
-  <a href="{{ .Site.BaseURL }}registry">Registry</a>
+<div class="nav" >
+  <a href="{{ .Site.BaseURL }}"><span class="nav-current">♦</span> Home <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}our-story"><span class="nav-current">♦</span> Our Story <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}gallery"><span class="nav-current">♦</span> Gallery <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}rsvp"><span class="nav-current">♦</span> RSVP <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}travel"><span class="nav-current">♦</span> Travel <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}faq"><span class="nav-current">♦</span> What to Know <span class="nav-current">♦</span></a>
+  <a href="{{ .Site.BaseURL }}registry"><span class="nav-current">♦</span> Registry <span class="nav-current">♦</span></a>
 </div>
 
-<div class="nav" id="mobile">
-  <img id="menu-icon" src="{{ .Site.BaseURL }}{{ .Site.Params.accents.menu }}" alt="logo {{ .Site.Title }}"> 
+<div id="mobile">
+  <img id="menu-icon" src="{{ .Site.BaseURL }}{{ .Site.Params.accents.menu }}" alt="logo {{ .Site.Title }}" onclick="">
 </div>
+
+<script>
+  const galleryImgs = document.getElementById('gallery').children;
+  window.onload = focusImg(galleryImgs[0]);
+
+  function focusImg(galleryImg) {
+    const curFocusedImg = document.getElementById("current-img");
+    curFocusedImg.src = galleryImg.src;
+    galleryImg.scrollIntoView({ behavior: "smooth", inline: "center" });
+    
+    setGalleryFilter(galleryImg)
+  }
+</script>

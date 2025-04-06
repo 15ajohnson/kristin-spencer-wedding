@@ -561,11 +561,12 @@ body {
     flex-direction: column;
     margin-top: 38px;
     grid-gap: 5px;
-    padding: 0px 5px;
+    padding: 0px 1%;
     background-color: white;
     overflow-x: unset;
     overflow-y: scroll;
-
+    width: 98%;
+    
     img {
       cursor: auto !important;
       filter: none !important;

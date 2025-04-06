@@ -5,16 +5,14 @@
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body style="overflow: hidden; margin-top: unset;">
+  <body style="overflow: hidden;">
   <div id="rsvp-content">
     <nav>
       {{ partial "nav.html" . }}
     </nav>
 
-    <head >
-      <div style="margin-top: 35px;">
+    <head>
         {{ partial "head-minimal.html" . }}
-      </div>
     </head>
     
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckgypK5UFgeRdODmmiN0hLk3YULNMw_Bsoc4JLaJCWRGsWug/viewform" frameborder="0" marginheight="0" marginwidth="0" allow="frame-ancestors docs.google.com;">Loading…</iframe>

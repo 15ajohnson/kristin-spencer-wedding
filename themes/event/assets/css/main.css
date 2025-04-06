@@ -83,7 +83,6 @@ body {
   line-height: 1.5;
   container-type: inline-size;
   background: #f6f6f6;
-  margin-top: 38px;
 }
 
 .background {
@@ -109,7 +108,7 @@ body {
 
 #header-content #logo {
   width: 97.78px;
-  margin-top: 20px;
+  margin-top: 58px;
 }
 
 @keyframes fadeIn {
@@ -392,6 +391,7 @@ body {
   flex-direction: column;
   height: 100vh;
   background-color: rgb(243 243 243 / 67%);
+  margin-top: 38px;
 }
 
 #focused-gallery {

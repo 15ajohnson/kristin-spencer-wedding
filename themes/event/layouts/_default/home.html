@@ -4,8 +4,8 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body style="overflow: hidden;">
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" style="overflow: hidden;">
+  <body>
     <nav>
       {{ partial "nav.html" . }}
     </nav>

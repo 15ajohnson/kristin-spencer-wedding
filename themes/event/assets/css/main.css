@@ -75,7 +75,6 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: auto;
 }
 
 body {
@@ -84,6 +83,7 @@ body {
   line-height: 1.5;
   container-type: inline-size;
   background: #f6f6f6;
+  margin-top: 38px;
 }
 
 .background {
@@ -109,7 +109,7 @@ body {
 
 #header-content #logo {
   width: 97.78px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
@@ -199,14 +199,14 @@ body {
   top: 0;
   width: 100%;
   background: #c4cdbd;
-  padding: 7px 0px;
+  padding: 9px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 99;
-  max-height: 35px;
+  max-height: 38px;
   overflow: hidden;
 }
 
@@ -335,7 +335,7 @@ body {
     align-items: center;
     position: fixed;
     z-index: 99;
-    max-height: 35px;
+    max-height: 38px;
     overflow: hidden;
   }
 
@@ -395,7 +395,6 @@ body {
 }
 
 #focused-gallery {
-  margin-top: 35px;
   text-align: center;
   width: 100%;
   display: flex;
@@ -547,10 +546,9 @@ body {
   }
 }
 
-@container (max-width: 1000px) {
+@container (max-width: 800px) {
   #gallery-container {
     background-image: none !important;
-    margin-top: 45px;
   }
 
   #focused-gallery {

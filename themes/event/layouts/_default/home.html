@@ -5,7 +5,7 @@
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-  <body >
+  <body style="overflow: hidden;">
     <nav>
       {{ partial "nav.html" . }}
     </nav>
@@ -17,8 +17,7 @@
     </div>
 
     <main id="main">
-      <div id="content">
-        <img id="main-image" src="{{ .Site.BaseURL }}images/personal/K _2b S-158.jpg">
+      <div id="content" class="background fade-in-animation"  style="background-image: url('{{ .Site.BaseURL }}images/personal/28.jpg')">
       </div>
     </main>
   </body>

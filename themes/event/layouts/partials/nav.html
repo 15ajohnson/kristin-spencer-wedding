@@ -5,22 +5,24 @@
   <a href="{{ .Site.BaseURL }}rsvp"><span class="nav-current">♦</span> RSVP <span class="nav-current">♦</span></a>
   <a href="{{ .Site.BaseURL }}travel"><span class="nav-current">♦</span> Travel <span class="nav-current">♦</span></a>
   <a href="{{ .Site.BaseURL }}faq"><span class="nav-current">♦</span> What to Know <span class="nav-current">♦</span></a>
-  <a href="{{ .Site.BaseURL }}registry"><span class="nav-current">♦</span> Registry <span class="nav-current">♦</span></a>
+  <a href="https://registry.theknot.com/kristin-adams-spencer-king-january-2026-oh/69459456" target="_blank"><span class="nav-current">♦</span> Registry <span class="nav-current">♦</span></a>
 </div>
 
 <div id="mobile">
-  <img id="menu-icon" src="{{ .Site.BaseURL }}{{ .Site.Params.accents.menu }}" alt="logo {{ .Site.Title }}" onclick="">
+  <img id="menu-icon" src="{{ .Site.BaseURL }}{{ .Site.Params.accents.menu }}" alt="logo {{ .Site.Title }}" onclick="displayNav()">
 </div>
 
 <script>
-  const galleryImgs = document.getElementById('gallery').children;
-  window.onload = focusImg(galleryImgs[0]);
+  function displayNav() {
+    const nav = document.getElementsByClassName('nav')[0];
 
-  function focusImg(galleryImg) {
-    const curFocusedImg = document.getElementById("current-img");
-    curFocusedImg.src = galleryImg.src;
-    galleryImg.scrollIntoView({ behavior: "smooth", inline: "center" });
+    console.log(nav.style.display)
+    if (nav.style.display == "none" || nav.style.display == "") {
+      nav.style.display = "flex";
+    } else {
+      nav.style.display = "none";
+    }
     
-    setGalleryFilter(galleryImg)
   }
+
 </script>

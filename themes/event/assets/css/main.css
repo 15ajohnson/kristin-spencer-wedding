@@ -134,7 +134,7 @@ body {
 #sub-header {
   font-family: 'Chamberi Regular';
   color: #373737;
-  font-size: 35px;  
+  font-size: 4.5vmin; 
   letter-spacing: 8px;
   margin: 2px 0px 2px 0px;
 }
@@ -214,9 +214,9 @@ body {
   font-family: 'CrimsonText-SemiBold';
   color: #505956;
   text-decoration: none;
-  padding: 0px 3%;
+  padding: 0px 2%;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 2vmin;
   text-wrap-mode: nowrap;
 }
 
@@ -244,23 +244,34 @@ body {
   margin-left: 10px;
 }
 
-#menu-icon-active {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+#content {
+  height: 500px;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
-@container (max-width: 700px) {
+#nav-accent {
+  width: 20%;
+}
+
+@container (min-width: 800px) {
+  #rsvp-text {
+    font-size: 18px;
+    line-height: 28px;
+    height: 25px;
+  }
+}
+
+@container (max-width: 800px) {
   #header-content #logo {
     width: 100px;
   }
 
-  #sub-header {
-    font-size: 4.5vw;
-  }
-
   #sub-header-info {
-    font-size: 2.5vw;
+    font-size: 10px;
     letter-spacing: 4px;
   }
 
@@ -271,8 +282,7 @@ body {
   }
   
   .nav {
-    width: auto;
-    background: #c2d1d86e;
+    background: #e8ecee;
     height: 100vh;
     position: fixed;
     z-index: 98;
@@ -280,7 +290,38 @@ body {
     max-height: none;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    padding: 40px 1%;
+    display: none;
+    box-shadow: 3px 0 20px 0 #00000047;
+    width: min-content;
+    border-right: 9px solid #d9e2e5;
+    border-left: 9px solid #d9e2e5;
+  }
+
+  .nav a {
+    font-family: 'CrimsonText-SemiBold';
+    color: #52676f;
+    text-decoration: none;
+    margin: 3% 0px;
+    padding: 8px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-wrap-mode: nowrap;
+  }
+  
+  .nav-current {
+    color: #52676f;
+    transition: 0.3s;
+    font-size: 10px;
+    vertical-align: 1px;
+  }
+  
+  .nav a:hover {
+    color: #52676f;
+  }
+  
+  .nav a:hover .nav-current {
+    color: #52676f;
   }
 
   #mobile {
@@ -297,6 +338,8 @@ body {
     max-height: 35px;
     overflow: hidden;
   }
+
+
 }
 
 @keyframes fadeInImg {
@@ -310,7 +353,8 @@ body {
   }
 }
 
-#main #main-image {
+#main-image {
+  content: url('../images/personal/K _2b S-158.jpg');
   width: 100%;
   display: block;
   filter: blur(2px);
@@ -503,7 +547,7 @@ body {
   }
 }
 
-@container (max-width: 1100px) {
+@container (max-width: 1000px) {
   #gallery-container {
     background-image: none !important;
   }
@@ -572,7 +616,7 @@ iframe {
   font-family: 'Chamberi Light Italic';
   padding: 30px 0px;
   color: #373737;
-  font-size: 3.5vw;
+  font-size: 40px;
   letter-spacing: 6px;
   scroll-margin-top: 30px;
 }
@@ -628,7 +672,7 @@ iframe {
 #timeline-text {
   display: flex;
   flex-direction: row;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px;
   width: 80%;
   font-family: 'Chamberi Light';
   color: #373737;
@@ -757,7 +801,6 @@ iframe {
   grid-template-columns: auto auto auto auto;
   width: 100%;
   font-size: 24px;
-  column-gap: 0;
   column-gap: 50px;
   justify-items: center;
   justify-content: space-evenly;
@@ -773,16 +816,30 @@ iframe {
   color: white;
   font-family: 'Chamberi Light Italic';
   padding: 55px 0px 30px 0px;
-  font-size: 3vw;
+  font-size: 5vmin;
   letter-spacing: 6px;
   text-shadow: 2px 2px 4px #000000;
 }
 
-@container (max-width: 700px) {
-  #our-story-title {
-    font-size: 6.5vw;
+@container (max-width: 800px) { 
+  #timeline-text {
+    font-size: 80%;
+    width: 100%;
+    padding: 10px 1%;
   }
 
+  .timeline-img {
+    width: 120px;
+    opacity: 100%;
+  }
+
+  #timer {
+    letter-spacing: 3px;
+    width: 100%;
+    font-size: 100%;
+    column-gap: 5%;
+  }
+/* 
   #timeline-start {
     width: 80%;
   }
@@ -795,11 +852,7 @@ iframe {
     width: 25%;
   }
 
-  #timeline-text {
-    font-size: 50%;
-    outline-offset: 3px;
-    outline: 3px double #b3c7e0;
-  }
+
 
   #spacer {
     width: 25%;
@@ -826,7 +879,7 @@ iframe {
     margin: 7px 0px;
     color: white;
     padding: 5px 0px;
-  }
+  } */
 }
 
 /*
@@ -889,17 +942,16 @@ iframe {
   color: #373737;
 }
 
+@container (max-width: 800px) {
+  #faq-container {
+    width: 80%;
+  }
+}
+
 
 /*
   TRAVEL STYLING
 */
-
-@container (max-width: 700px) {
-  .accommodation-containers {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-}
 
 #travel-content {
   background-color: #f6f6f6;
@@ -923,14 +975,15 @@ iframe {
   text-align: center;
   border-bottom: 1px solid;
   border-image: linear-gradient(to left, #f6f6f600, #bac5b1 50%, #f6f6f600 100%) 1 0;
+  width: 100%;
 }
 
 #venue-accent-container {
   display: flex;
-  width: 60%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 80%;
 }
 
 #venue-description {
@@ -960,11 +1013,10 @@ iframe {
 
 #venue-directions {
   margin: 5px 0px 10px 0px;
-  padding: 0px 20px 0px 20px;
+  padding-top: 20px;
   color: #505c44;
   font-family: 'Chamberi Light Italic';
   letter-spacing: 6px;
-  line-height: 37px;
   transition: all 0.5s ease;
   margin: 0;
   display: block;
@@ -1041,4 +1093,21 @@ iframe {
   object-fit: cover;
   outline: 3px solid #dee5e8;
   outline-offset: 6px;
+}
+
+#accomodation-text {
+  font-family: 'Chamberi Regular';
+  text-align: center;
+  padding: 0;
+}
+
+@container (max-width: 800px) {
+  .accommodation-containers {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .accommodation-img-containers {
+    padding: 0;
+  }
 }

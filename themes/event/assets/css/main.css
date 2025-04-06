@@ -294,6 +294,7 @@ body {
     display: none;
     box-shadow: 3px 0 20px 0 #00000047;
     width: min-content;
+    min-width: 160px;
     border-right: 9px solid #d9e2e5;
     border-left: 9px solid #d9e2e5;
   }

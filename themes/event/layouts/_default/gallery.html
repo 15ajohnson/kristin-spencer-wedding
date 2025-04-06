@@ -5,7 +5,7 @@
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" style="overflow: hidden;">
-  <body style="height: unset; background-color: unset;">
+  <body style="height: unset; background-color: unset; overflow: hidden;">
     <nav>
       {{ partial "nav.html" . }}
     </nav>
@@ -107,11 +107,11 @@
     const nav = document.getElementsByClassName('nav')[0]
     const arrows = Array.from(document.getElementsByClassName('arrow'))
     const zoomClose = document.getElementById('zoom-close');
-    const body = document.body;
+    const galleryContainer = document.getElementById('gallery-container');
 
     if (window.getComputedStyle(zoomClose).display == 'none') {
       nav.style.display = "none";
-      body.style.marginTop = "0px"
+      galleryContainer.style.marginTop = "0px"
       curImg.parentElement.classList.add('zoom');
       curImg.classList.add('zoom');
       arrows.forEach(element => {
@@ -120,7 +120,7 @@
       zoomClose.classList.add('active');
     } else {
       nav.style.display = "flex";
-      body.style.marginTop = "35px"
+      galleryContainer.style.marginTop = "35px"
       curImg.parentElement.classList.remove('zoom');
       curImg.classList.remove('zoom');
       arrows.forEach(element => {

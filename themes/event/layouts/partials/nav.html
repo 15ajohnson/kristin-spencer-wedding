@@ -15,12 +15,14 @@
 <script>
   function displayNav() {
     const nav = document.getElementsByClassName('nav')[0];
+    const body = document.body;
 
-    console.log(nav.style.display)
     if (nav.style.display == "none" || nav.style.display == "") {
       nav.style.display = "flex";
+      body.style.overflow = "hidden"
     } else {
       nav.style.display = "none";
+      body.style.overflow = "";
     }
     
   }

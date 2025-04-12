@@ -162,7 +162,7 @@ body {
 
 #rsvp-text {
   margin: 5px 0px 10px 0px;
-  padding: 0px 20px;
+  padding: 0px 15px 0px 20px;
   color: #505c44;
   font-family: 'Chamberi Light Italic';
   letter-spacing: 6px;
@@ -293,8 +293,7 @@ body {
     padding: 40px 1%;
     display: none;
     box-shadow: 3px 0 20px 0 #00000047;
-    width: min-content;
-    min-width: 160px;
+    width: max-content;
     border-right: 9px solid #d9e2e5;
     border-left: 9px solid #d9e2e5;
   }

@@ -505,6 +505,26 @@ body {
   animation-delay: 0.5s;
 }
 
+#gallery img {
+  transition: 250ms 50ms;
+  pointer-events: auto;
+  height: 100px;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+  padding: 10px 0px;
+  filter: saturate(.2) opacity(.8);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#galler img:hover {
+  cursor: pointer;
+  filter: none !important;
+}
+
 
 #gallery::-webkit-scrollbar {
   scrollbar-width: thin;

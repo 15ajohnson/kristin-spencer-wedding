@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes" />
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" style="overflow: hidden;">
   <body style="height: unset; background-color: unset; overflow: hidden;">
-    <nav>
-      {{ partial "nav.html" . }}
-    </nav>
     <div id="gallery-container" class="background fade-in-animation" style="background-image: url('{{ .Site.BaseURL }}images/backgrounds/flowers-left.png'), url('{{ .Site.BaseURL }}images/backgrounds/flowers-right.png');">
+      <div>
+        {{ partial "nav.html" . }}
+      </div>
       <div id="focused-gallery">
         <button id="zoom-close" onclick="zoomImg()">&#10005;</button>
         <button class="arrow" onclick="nextImg(-1)">&#10094;</button>

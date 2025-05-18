@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" style="overflow: hidden;">
   <body style="overflow-x: hidden;">
     <div>
-      <nav>
+      <div>
         {{ partial "nav.html" . }}
-      </nav>
+      </div>
 
       <div class="background fade-in-animation">
         <head> 

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" style="overflow: hidden;">
   <body style="overflow-x: hidden;">
     <div>
-      <nav>
+      <div>
         {{ partial "nav.html" . }}
-      </nav>
+      </div>
 
       <div class="background fade-in-animation">
         <head> 
@@ -58,7 +58,7 @@
               <p id="faq-question">Do you have a registry?</p>
 
               <p id="faq-answer">
-                Your presence at our wedding is the greatest gift we could ask for! For those who wish, we have a <a href="">registry</a>. 
+                Your presence at our wedding is the greatest gift we could ask for! For those who wish, we have a <a href="https://registry.theknot.com/kristin-adams-spencer-king-january-2026-oh/69459456" target="_blank">registry</a>. 
               </p>
 
               <p id="faq-question">Hotel Blocks</p>
